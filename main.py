@@ -142,13 +142,13 @@ class FolderMonitor(FileSystemEventHandler):
 
 def get_inputs():
     print("Computers Found:", computer_ids)
-    #target_computer = input("Enter target computer id: ")
-    target_computer = str(int(computer_ids[0]))
+    target_computer = input("Enter target computer id: ")
+    #target_computer = str(int(computer_ids[0]))
 
     if int(target_computer) not in computer_ids:
         raise ValueError("Invalid Target Computer ID")
 
-    active_path = "test/" # input("Active Path: ")
+    active_path = input("Active Path: ")
 
     return target_computer, active_path
 
